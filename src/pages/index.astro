@@ -1,0 +1,235 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import ContentMain from "../components/ContentMain.astro";
+
+const dataSections = [
+	{
+		tittle: "Model Y",
+		spanTittle: "Concertar una prueba de conducción",
+		button: [
+			{
+				class: "bg-white/[90%] text-black mr-4",
+				text: "Entrega más rápida",
+			},
+			{
+				class: "bg-black/[70%] text-white",
+				text: "Pedido personalizado",
+			},
+		],
+		spanButton: "Disponible con Moves III",
+	},
+	{
+		tittle: "Model 3",
+		spanTittle: "",
+		button: [
+			{
+				class: "bg-black/[90%] text-white mr-4",
+				text: "Pedido personalizado",
+			},
+			{
+				class: "bg-white/[70%] text-black",
+				text: "Prueba de conducción",
+			},
+		],
+		spanButton: "Disponible con Moves III",
+	},
+	{
+		tittle: "Model S",
+		spanTittle: "Explorar inventario",
+		button: [
+			{
+				class: "bg-black/[90%] text-white mr-4",
+				text: "Pedido personalizado",
+			},
+			{
+				class: "bg-white/[70%] text-black",
+				text: "Prueba de conducción",
+			},
+		],
+		spanButton: "",
+	},
+	{
+		tittle: "Model X",
+		spanTittle: "Explorar inventario",
+		button: [
+			{
+				class: "bg-black/[90%] text-white mr-4",
+				text: "Pedido personalizado",
+			},
+			{
+				class: "bg-white/[70%] text-black",
+				text: "Prueba de conducción",
+			},
+		],
+		spanButton: "",
+	},
+];
+
+let tittleMain = dataSections[0];
+---
+
+<Layout title="Clon Tesla">
+	<Header message={tittleMain} dataSections={dataSections} />
+	<main class="relative snap-y snap-mandatory h-screen w-full overflow-auto">
+		<div
+			class="observer-section h-screen w-full snap-center"
+			data-header-color="white"
+			position-content="0"
+		>
+			<video
+				class="object-cover w-full h-full"
+				autoplay
+				muted
+				loop
+				src="/public/video.mp4"></video>
+		</div>
+		<div
+			class="observer-section h-screen w-full snap-center"
+			data-header-color="black"
+			position-content="1"
+		>
+			<img
+				class="object-cover w-full h-full"
+				src="/public/tesla-model3.avif"
+			/>
+		</div>
+		<div
+			class="observer-section h-screen w-full snap-center"
+			data-header-color="black"
+			position-content="2"
+		>
+			<img
+				class="object-cover w-full h-full"
+				src="/public/tesla-modelS.avif"
+			/>
+		</div>
+		<div
+			class="observer-section h-screen w-full snap-center"
+			data-header-color="black"
+			position-content="3"
+		>
+			<img
+				class="object-cover w-full h-full"
+				src="/public/tesla-modelX.avif"
+			/>
+		</div>
+	</main>
+	<ContentMain tittleMain={tittleMain} />
+</Layout>
+
+<script>
+	// DATA SECTIONS
+	const dataSections = [
+		{
+			tittle: "Model Y",
+			elementATittle: "Concertar una prueba de conducción",
+			button: [
+				{
+					class: "bg-white/[90%] text-black mr-4",
+					text: "Entrega más rápida",
+				},
+				{
+					class: "bg-black/[70%] text-white",
+					text: "Pedido personalizado",
+				},
+			],
+			elementAButton: "Disponible con Moves III",
+		},
+		{
+			tittle: "Model 3",
+			elementATittle: "",
+			button: [
+				{
+					class: "bg-black/[90%] text-white mr-4",
+					text: "Pedido personalizado",
+				},
+				{
+					class: "bg-white/[70%] text-black",
+					text: "Prueba de conducción",
+				},
+			],
+			elementAButton: "Disponible con Moves III",
+		},
+		{
+			tittle: "Model S",
+			elementATittle: "Explorar inventario",
+			button: [
+				{
+					class: "bg-black/[90%] text-white mr-4",
+					text: "Pedido personalizado",
+				},
+				{
+					class: "bg-white/[70%] text-black",
+					text: "Prueba de conducción",
+				},
+			],
+			elementAButton: "",
+		},
+		{
+			tittle: "Model X",
+			elementATittle: "Explorar inventario",
+			button: [
+				{
+					class: "bg-black/[90%] text-white mr-4",
+					text: "Pedido personalizado",
+				},
+				{
+					class: "bg-white/[70%] text-black",
+					text: "Prueba de conducción",
+				},
+			],
+			elementAButton: "",
+		},
+	];
+	// ELEMENTS SELECTIONS
+	const headerElement = document.querySelector(
+		"#landing-header",
+	) as HTMLElement;
+	const h1Element = document.querySelector("#content-main-h1") as HTMLElement;
+	const aTittleElement = document.querySelector(
+		"#content-main-a-tittle",
+	) as HTMLElement;
+	const aButtonElement = document.querySelector(
+		"#content-main-a-button",
+	) as HTMLElement;
+	const ButtonElementOne = document.querySelector(
+		"#content-button-0",
+	) as HTMLElement;
+	const ButtonElementTwo = document.querySelector(
+		"#content-button-1",
+	) as HTMLElement;
+
+	// IntersectionObserver
+	const observerOptions = {
+		root: null,
+		rootMargin: "0px",
+		threshold: 0.2,
+	};
+
+	const observer = new IntersectionObserver((entries) => {
+		entries.forEach((entry) => {
+			const { isIntersecting } = entry;
+			if (isIntersecting) {
+				const color = entry.target.getAttribute("data-header-color");
+				const position = entry.target.getAttribute("position-content");
+				const selectDataSection = dataSections[position];
+				h1Element.innerHTML = selectDataSection.tittle;
+				aTittleElement.innerHTML = selectDataSection.elementATittle;
+				aButtonElement.innerHTML = selectDataSection.elementAButton;
+				ButtonElementOne.textContent = selectDataSection.button[0].text;
+				ButtonElementTwo.textContent = selectDataSection.button[1].text;
+				ButtonElementOne.className = selectDataSection.button[0].class;
+				ButtonElementTwo.className = selectDataSection.button[1].class;
+				h1Element.style.color = color;
+				aTittleElement.style.color = color;
+				aButtonElement.style.color = color;
+				headerElement.style.color = color;
+			}
+		});
+	}, observerOptions);
+
+	const sectionsElements = document.querySelectorAll(".observer-section");
+
+	sectionsElements.forEach((section) => observer.observe(section));
+</script>
