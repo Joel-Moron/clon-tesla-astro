@@ -114,6 +114,38 @@ let tittleMain = dataSections[0];
 				src="/public/tesla-modelX.avif"
 			/>
 		</div>
+		<div
+			class="observer-section h-screen w-full snap-center"
+			data-header-color="white"
+			position-content="4"
+		>
+			<video
+				class="object-cover w-full h-full"
+				autoplay
+				muted
+				loop
+				src="/public/Demo-Tesla.webm"></video>
+		</div>
+		<div
+			class="observer-section h-screen w-full snap-center"
+			data-header-color="black"
+			position-content="5"
+		>
+			<img
+				class="object-cover w-full h-full"
+				src="/public/Desktop_SolarPanels.avif"
+			/>
+		</div>
+		<div
+			class="observer-section h-screen w-full snap-center"
+			data-header-color="black"
+			position-content="6"
+		>
+			<img
+				class="object-cover w-full h-full"
+				src="/public/Homepage-Accessories.avif"
+			/>
+		</div>
 	</main>
 	<ContentMain tittleMain={tittleMain} />
 </Layout>
@@ -141,11 +173,11 @@ let tittleMain = dataSections[0];
 			elementATittle: "",
 			button: [
 				{
-					class: "bg-black/[90%] text-white mr-4",
+					class: "bg-black/[70%] text-white mr-4",
 					text: "Pedido personalizado",
 				},
 				{
-					class: "bg-white/[70%] text-black",
+					class: "bg-white/[90%] text-black",
 					text: "Prueba de conducción",
 				},
 			],
@@ -156,11 +188,11 @@ let tittleMain = dataSections[0];
 			elementATittle: "Explorar inventario",
 			button: [
 				{
-					class: "bg-black/[90%] text-white mr-4",
+					class: "bg-black/[70%] text-white mr-4",
 					text: "Pedido personalizado",
 				},
 				{
-					class: "bg-white/[70%] text-black",
+					class: "bg-white/[90%] text-black",
 					text: "Prueba de conducción",
 				},
 			],
@@ -171,12 +203,45 @@ let tittleMain = dataSections[0];
 			elementATittle: "Explorar inventario",
 			button: [
 				{
-					class: "bg-black/[90%] text-white mr-4",
+					class: "bg-black/[70%] text-white mr-4",
 					text: "Pedido personalizado",
 				},
 				{
-					class: "bg-white/[70%] text-black",
+					class: "bg-white/[90%] text-black",
 					text: "Prueba de conducción",
+				},
+			],
+			elementAButton: "",
+		},
+		{
+			tittle: "Disfrute de Tesla",
+			elementATittle: "Programe una prueba de conducción hoy mismo",
+			button: [
+				{
+					class: "bg-tranparent text-white border-[3px] border-solid border-white",
+					text: "Prueba de conducción",
+				},
+			],
+			elementAButton: "",
+		},
+		{
+			tittle: "Solar y Powerwall",
+			elementATittle: "energía para todos",
+			button: [
+				{
+					class: "bg-black/[50%] text-white",
+					text: "Saber más",
+				},
+			],
+			elementAButton: "",
+		},
+		{
+			tittle: "Accesorios",
+			elementATittle: "",
+			button: [
+				{
+					class: "bg-white/[90%] text-black",
+					text: "Comprar ahora",
 				},
 			],
 			elementAButton: "",
@@ -218,9 +283,16 @@ let tittleMain = dataSections[0];
 				aTittleElement.innerHTML = selectDataSection.elementATittle;
 				aButtonElement.innerHTML = selectDataSection.elementAButton;
 				ButtonElementOne.textContent = selectDataSection.button[0].text;
-				ButtonElementTwo.textContent = selectDataSection.button[1].text;
 				ButtonElementOne.className = selectDataSection.button[0].class;
-				ButtonElementTwo.className = selectDataSection.button[1].class;
+				if (selectDataSection.button[1]) {
+					ButtonElementTwo.style.display = "block";
+					ButtonElementTwo.textContent =
+						selectDataSection.button[1].text;
+					ButtonElementTwo.className =
+						selectDataSection.button[1].class;
+				} else {
+					ButtonElementTwo.style.display = "none";
+				}
 				h1Element.style.color = color;
 				aTittleElement.style.color = color;
 				aButtonElement.style.color = color;
