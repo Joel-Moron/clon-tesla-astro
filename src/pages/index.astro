@@ -2,152 +2,13 @@
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import ContentMain from "../components/ContentMain.astro";
-
-const dataSections = [
-	{
-		tittle: "Model Y",
-		spanTittle: "Concertar una prueba de conducción",
-		button: [
-			{
-				class: "bg-white/[90%] text-black mr-4",
-				text: "Entrega más rápida",
-			},
-			{
-				class: "bg-black/[70%] text-white",
-				text: "Pedido personalizado",
-			},
-		],
-		spanButton: "Disponible con Moves III",
-	},
-	{
-		tittle: "Model 3",
-		spanTittle: "",
-		button: [
-			{
-				class: "bg-black/[90%] text-white mr-4",
-				text: "Pedido personalizado",
-			},
-			{
-				class: "bg-white/[70%] text-black",
-				text: "Prueba de conducción",
-			},
-		],
-		spanButton: "Disponible con Moves III",
-	},
-	{
-		tittle: "Model S",
-		spanTittle: "Explorar inventario",
-		button: [
-			{
-				class: "bg-black/[90%] text-white mr-4",
-				text: "Pedido personalizado",
-			},
-			{
-				class: "bg-white/[70%] text-black",
-				text: "Prueba de conducción",
-			},
-		],
-		spanButton: "",
-	},
-	{
-		tittle: "Model X",
-		spanTittle: "Explorar inventario",
-		button: [
-			{
-				class: "bg-black/[90%] text-white mr-4",
-				text: "Pedido personalizado",
-			},
-			{
-				class: "bg-white/[70%] text-black",
-				text: "Prueba de conducción",
-			},
-		],
-		spanButton: "",
-	},
-];
-
-let tittleMain = dataSections[0];
+import Fondos from "../components/Fondos.astro";
 ---
 
 <Layout title="Clon Tesla">
-	<Header message={tittleMain} dataSections={dataSections} />
-	<main class="relative snap-y snap-mandatory h-screen w-full overflow-auto">
-		<div
-			class="observer-section h-screen w-full snap-center"
-			data-header-color="white"
-			position-content="0"
-		>
-			<video
-				class="object-cover w-full h-full"
-				autoplay
-				muted
-				loop
-				src="/video.mp4"></video>
-		</div>
-		<div
-			class="observer-section h-screen w-full snap-center"
-			data-header-color="black"
-			position-content="1"
-		>
-			<img
-				class="object-cover w-full h-full"
-				src="/tesla-model3.avif"
-			/>
-		</div>
-		<div
-			class="observer-section h-screen w-full snap-center"
-			data-header-color="black"
-			position-content="2"
-		>
-			<img
-				class="object-cover w-full h-full"
-				src="/tesla-modelS.avif"
-			/>
-		</div>
-		<div
-			class="observer-section h-screen w-full snap-center"
-			data-header-color="black"
-			position-content="3"
-		>
-			<img
-				class="object-cover w-full h-full"
-				src="/tesla-modelX.avif"
-			/>
-		</div>
-		<div
-			class="observer-section h-screen w-full snap-center"
-			data-header-color="white"
-			position-content="4"
-		>
-			<video
-				class="object-cover w-full h-full"
-				autoplay
-				muted
-				loop
-				src="/Demo-Tesla.webm"></video>
-		</div>
-		<div
-			class="observer-section h-screen w-full snap-center"
-			data-header-color="black"
-			position-content="5"
-		>
-			<img
-				class="object-cover w-full h-full"
-				src="/Desktop_SolarPanels.avif"
-			/>
-		</div>
-		<div
-			class="observer-section h-screen w-full snap-center"
-			data-header-color="black"
-			position-content="6"
-		>
-			<img
-				class="object-cover w-full h-full"
-				src="/Homepage-Accessories.avif"
-			/>
-		</div>
-	</main>
-	<ContentMain tittleMain={tittleMain} />
+	<Header />
+	<Fondos />
+	<ContentMain />
 </Layout>
 
 <script>
@@ -158,11 +19,11 @@ let tittleMain = dataSections[0];
 			elementATittle: "Concertar una prueba de conducción",
 			button: [
 				{
-					class: "bg-white/[90%] text-black mr-4",
+					class: "bg-white/[0.8] backdrop-cristal text-black mr-4",
 					text: "Entrega más rápida",
 				},
 				{
-					class: "bg-black/[70%] text-white",
+					class: "bg-[#222222]/[0.65] backdrop-cristal text-white",
 					text: "Pedido personalizado",
 				},
 			],
@@ -173,11 +34,11 @@ let tittleMain = dataSections[0];
 			elementATittle: "",
 			button: [
 				{
-					class: "bg-black/[70%] text-white mr-4",
+					class: "bg-[#222222]/[0.65] backdrop-cristal text-white mr-4",
 					text: "Pedido personalizado",
 				},
 				{
-					class: "bg-white/[90%] text-black",
+					class: "bg-white/[0.8] backdrop-cristal text-black",
 					text: "Prueba de conducción",
 				},
 			],
@@ -188,11 +49,11 @@ let tittleMain = dataSections[0];
 			elementATittle: "Explorar inventario",
 			button: [
 				{
-					class: "bg-black/[70%] text-white mr-4",
+					class: "bg-[#222222]/[0.65] backdrop-cristal text-white mr-4",
 					text: "Pedido personalizado",
 				},
 				{
-					class: "bg-white/[90%] text-black",
+					class: "bg-white/[0.8] backdrop-cristal text-black",
 					text: "Prueba de conducción",
 				},
 			],
@@ -203,11 +64,11 @@ let tittleMain = dataSections[0];
 			elementATittle: "Explorar inventario",
 			button: [
 				{
-					class: "bg-black/[70%] text-white mr-4",
+					class: "bg-[#222222]/[0.65] backdrop-cristal text-white mr-4",
 					text: "Pedido personalizado",
 				},
 				{
-					class: "bg-white/[90%] text-black",
+					class: "bg-white/[0.8] backdrop-cristal text-black",
 					text: "Prueba de conducción",
 				},
 			],
@@ -229,7 +90,7 @@ let tittleMain = dataSections[0];
 			elementATittle: "energía para todos",
 			button: [
 				{
-					class: "bg-black/[50%] text-white",
+					class: "bg-[#222222]/[0.65] backdrop-cristal text-white backdrop-cristal",
 					text: "Saber más",
 				},
 			],
@@ -240,7 +101,7 @@ let tittleMain = dataSections[0];
 			elementATittle: "",
 			button: [
 				{
-					class: "bg-white/[90%] text-black",
+					class: "bg-white backdrop-cristal text-black",
 					text: "Comprar ahora",
 				},
 			],

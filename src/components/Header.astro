@@ -1,61 +1,69 @@
 ---
-
+import Vehiculos from "../services/Vehiculos.json";
 ---
 
-<header
-    id="landing-header"
-    class="absolute top-0 w-full flex px-8 justify-between h-14 items-center z-10"
->
-    <a
-        href="#"
-        class="box-border px-4 w-[152px] h-[32px] grid place-content-center"
+<header id="landing-header" class="absolute top-0 w-full z-50">
+    <div
+        id="content-header"
+        class="w-full flex px-8 justify-between h-14 items-center"
     >
-        <svg
-            class="size-max h-[24px] w-[120px]"
-            viewBox="0 0 342 35"
-            xmlns="http://www.w3.org/2000/svg"
-            ><path
-                d="M0 .1a9.7 9.7 0 0 0 7 7h11l.5.1v27.6h6.8V7.3L26 7h11a9.8 9.8 0 0 0 7-7H0zm238.6 0h-6.8v34.8H263a9.7 9.7 0 0 0 6-6.8h-30.3V0zm-52.3 6.8c3.6-1 6.6-3.8 7.4-6.9l-38.1.1v20.6h31.1v7.2h-24.4a13.6 13.6 0 0 0-8.7 7h39.9v-21h-31.2v-7h24zm116.2 28h6.7v-14h24.6v14h6.7v-21h-38zM85.3 7h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7zm0 13.8h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7zm0 14.1h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7zM308.5 7h26a9.6 9.6 0 0 0 7-7h-40a9.6 9.6 0 0 0 7 7z"
-                fill="currentColor"></path></svg
+        <a
+            href="#"
+            class="box-border px-4 w-[152px] h-[32px] grid place-content-center"
         >
-    </a>
-    <nav>
+            <svg
+                class="size-max h-[24px] w-[120px]"
+                viewBox="0 0 342 35"
+                xmlns="http://www.w3.org/2000/svg"
+                ><path
+                    d="M0 .1a9.7 9.7 0 0 0 7 7h11l.5.1v27.6h6.8V7.3L26 7h11a9.8 9.8 0 0 0 7-7H0zm238.6 0h-6.8v34.8H263a9.7 9.7 0 0 0 6-6.8h-30.3V0zm-52.3 6.8c3.6-1 6.6-3.8 7.4-6.9l-38.1.1v20.6h31.1v7.2h-24.4a13.6 13.6 0 0 0-8.7 7h39.9v-21h-31.2v-7h24zm116.2 28h6.7v-14h24.6v14h6.7v-21h-38zM85.3 7h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7zm0 13.8h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7zm0 14.1h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7zM308.5 7h26a9.6 9.6 0 0 0 7-7h-40a9.6 9.6 0 0 0 7 7z"
+                    fill="currentColor"></path></svg
+            >
+        </a>
         <ul
             class="flex text-sm [&>li>button]:transition-all [&>li>button]:duration-300"
         >
             <li>
-                <button class="hover:bg-black/[40%] h-8 px-2 py-1 rounded">
+                <button
+                    class="button-hover hover:bg-black/[5%] h-8 px-2 py-1 rounded"
+                >
                     <span class="mx-2 font-medium">Vehículos</span>
                 </button>
             </li>
             <li>
-                <button class="hover:bg-black/[40%] h-8 px-2 py-1 rounded">
+                <button
+                    class="button-hover hover:bg-black/[5%] h-8 px-2 py-1 rounded"
+                >
                     <span class="mx-2 font-medium">Energía</span>
                 </button>
             </li>
             <li>
-                <button class="hover:bg-black/[40%] h-8 px-2 py-1 rounded">
+                <button
+                    class="button-hover hover:bg-black/[5%] h-8 px-2 py-1 rounded"
+                >
                     <span class="mx-2 font-medium">Carga</span>
                 </button>
             </li>
             <li>
-                <button class="hover:bg-black/[40%] h-8 px-2 py-1 rounded">
+                <button
+                    class="button-hover hover:bg-black/[5%] h-8 px-2 py-1 rounded"
+                >
                     <span class="mx-2 font-medium">Descubrir</span>
                 </button>
             </li>
             <li>
-                <button class="hover:bg-black/[40%] h-8 px-2 py-1 rounded">
+                <button
+                    class="button-hover hover:bg-black/[5%] h-8 px-2 py-1 rounded"
+                >
                     <span class="mx-2 font-medium">Tienda</span>
                 </button>
             </li>
         </ul>
-    </nav>
-    <nav>
         <ol class="flex">
             <li class="w-[36px]">
                 <a
                     href="#"
-                    class="h-8 w-8 grid place-items-center rounded hover:bg-black/[40%]"
+                    class="h-8 w-8 grid place-items-center rounded hover:bg-black/[5%]"
                 >
                     <svg
                         class="h-6 w-6"
@@ -70,7 +78,7 @@
             </li>
             <li class="w-[36px]">
                 <button
-                    class="h-8 w-8 grid place-items-center rounded hover:bg-black/[40%]"
+                    class="h-8 w-8 grid place-items-center rounded hover:bg-black/[5%]"
                 >
                     <svg
                         class="h-6 w-6"
@@ -83,11 +91,11 @@
                     >
                 </button>
             </li>
-            <li class="w-[36px]">
+            <li class="w-[36px] mr-4">
                 <a
                     href="#"
                     class="h-8 w-8 mr
-                -4 grid place-items-center rounded hover:bg-black/[40%]"
+                    -4 grid place-items-center rounded hover:bg-black/[5%]"
                 >
                     <svg
                         class="h-6 w-6"
@@ -101,5 +109,83 @@
                 </a>
             </li>
         </ol>
-    </nav>
+    </div>
 </header>
+<div
+    id="bg-dialog"
+    class="backdrop-cristal hidden bg-black/[30%] absolute top-0 left-0 w-screen h-screen z-40"
+>
+</div>
+<div
+    id="dialog"
+    class="opacity-0 absolute top-0 left-0 h-0 overflow-hidden w-full bg-white text-black transition-visible-dialog z-40"
+>
+    <div class="flex w-full justify-center pt-20 p-12">
+        <div class="max-w-[1040px] w-[58%] grid grid-cols-4 text-center">
+            {
+                Vehiculos.map((vehiculo) => (
+                    <div class="dialog-content-vehiculos flex flex-col text-center pt-8 -mt-2 transition-all duration-1000">
+                        <img
+                            class="h-[119px]"
+                            src={vehiculo.src}
+                            alt={vehiculo.name}
+                        />
+                        <h3 class=" font-[500]">{vehiculo.name}</h3>
+                        <div class="flex justify-center gap-3 text-[12px] underline text-[#5E5C62]">
+                            <a href="#">Saber más</a>
+                            <a href="#">Pedir</a>
+                        </div>
+                    </div>
+                ))
+            }
+        </div>
+        <div
+            class="w-0 h-[300px] border-[1px] border-solid border-gray-200 mx-14"
+        >
+        </div>
+        <ol
+            class="flex flex-col text-black w-[16%] text-[14px] font-medium gap-3 pt-2"
+        >
+            <li><a href="#">Prueba de conducción</a></li>
+            <li><a href="#">Tasación</a></li>
+            <li><a href="#">Vehículos preconfigurados</a></li>
+            <li><a href="#">Ocasión</a></li>
+            <li><a href="#">Coche de empresa</a></li>
+            <li><a href="#">Roadster</a></li>
+        </ol>
+    </div>
+</div>
+
+<style>
+    .transition-visible-dialog {
+        transition-property: height, opacity;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 300ms, 250ms;
+    }
+</style>
+
+<script>
+    const buttons = document.querySelectorAll(".button-hover");
+    const contentHeader = document.querySelector(
+        "#content-header",
+    ) as HTMLElement;
+    const dialog = document.querySelector("#dialog") as HTMLElement;
+    const fondoDialog = document.querySelector("#bg-dialog") as HTMLElement;
+
+    buttons.forEach((elemento, index) => {
+        elemento.addEventListener("mouseenter", () => {
+            fondoDialog.style.display = "block";
+            dialog.style.height = "500px";
+            dialog.style.opacity = "1";
+            contentHeader.style.color = "black";
+        });
+
+        elemento.addEventListener("mouseleave", () => {});
+    });
+    fondoDialog.addEventListener("mouseenter", () => {
+        fondoDialog.style.display = "none";
+        dialog.style.height = "0px";
+        dialog.style.opacity = "0";
+        contentHeader.style.color = "";
+    });
+</script>

@@ -1,0 +1,72 @@
+---
+import Footer from "./Footer.astro";
+---
+
+<main class="relative snap-y snap-mandatory h-screen w-full overflow-auto">
+    <div
+        class="observer-section h-screen w-full snap-center"
+        data-header-color="white"
+        position-content="0"
+    >
+        <video
+            class="object-cover w-full h-full"
+            autoplay
+            muted
+            loop
+            src="/video.mp4"></video>
+    </div>
+    <div
+        class="observer-section h-screen w-full snap-center"
+        data-header-color="black"
+        position-content="1"
+    >
+        <img class="object-cover w-full h-full" src="/tesla-model3.avif" />
+    </div>
+    <div
+        class="observer-section h-screen w-full snap-center"
+        data-header-color="black"
+        position-content="2"
+    >
+        <img class="object-cover w-full h-full" src="/tesla-modelS.avif" />
+    </div>
+    <div
+        class="observer-section h-screen w-full snap-center"
+        data-header-color="black"
+        position-content="3"
+    >
+        <img class="object-cover w-full h-full" src="/tesla-modelX.avif" />
+    </div>
+    <div
+        class="observer-section h-screen w-full snap-center"
+        data-header-color="white"
+        position-content="4"
+    >
+        <video
+            class="object-cover w-full h-full"
+            autoplay
+            muted
+            loop
+            src="/Demo-Tesla.webm"></video>
+    </div>
+    <div
+        class="observer-section h-screen w-full snap-center"
+        data-header-color="black"
+        position-content="5"
+    >
+        <img
+            class="object-cover w-full h-full"
+            src="/Desktop_SolarPanels.avif"
+        />
+    </div>
+    <div
+        class="relative observer-section h-screen w-full snap-center"
+        data-header-color="black"
+        position-content="6"
+    >
+        <img
+            class="object-cover w-full h-full"
+            src="/Homepage-Accessories.avif"
+        />
+        <Footer />
+    </div>
+</main>

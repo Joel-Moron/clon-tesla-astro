@@ -1,38 +1,31 @@
----
-let { tittleMain } = Astro.props;
----
-
 <div>
     <h1
         id="content-main-h1"
         class="absolute top-12 left-2/4 -translate-x-2/4 text-center text-[40px] font-medium pt-7"
     >
-        {tittleMain.tittle}
     </h1>
     <a
         id="content-main-a-tittle"
         href="#"
         class="absolute top-[135px] left-2/4 -translate-x-2/4 text-center underline decoration-solid text-sm"
-        >{tittleMain.spanTittle}</a
-    >
+    ></a>
     <div
-        class="absolute bottom-14 left-2/4 -translate-x-2/4 flex justify-center [&>button]:px-6 [&>button]:py-1 [&>button]:rounded [&>button]:h-[40px] [&>button]:w-[264px]"
+        class="absolute bottom-14 left-2/4 -translate-x-2/4 flex justify-center [&>button]:backdrop-cristal  [&>button]:px-6 [&>button]:py-1 [&>button]:rounded [&>button]:h-[40px] [&>button]:w-[264px]"
     >
-        {
-            tittleMain.button.map((btn, index) => (
-                <button
-                    id={`content-button-${index}`}
-                    class={btn.class + " px-6 py-1 rounded w-[264px] h-[40px]"}
-                >
-                    {btn.text}
-                </button>
-            ))
-        }
+        <button
+            id={`content-button-0`}
+            class={" px-6 py-1 rounded w-[264px] h-[40px] backdrop-cristal"}
+        >
+        </button>
+        <button
+            id={`content-button-1`}
+            class={" px-6 py-1 rounded w-[264px] h-[40px] backdrop-cristal"}
+        >
+        </button>
     </div>
     <a
         id="content-main-a-button"
         href="#"
         class="absolute bottom-0 left-2/4 -translate-x-2/4 pb-4 px-6 underline decoration-solid text-xs font-normal"
-        >{tittleMain.spanButton}</a
-    >
+    ></a>
 </div>
